@@ -1,4 +1,3 @@
-
 // SELECCIONAR LOS ELEMENTOS DEL HTML
 const textoNota = document.querySelector("#textoNota");
 const botonGuardar = document.querySelector("#guardarNota");
