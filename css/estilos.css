@@ -1,4 +1,5 @@
 
+/* ESTILOS GENERALES */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     color: #1e293b;
 }
 
+/* ENCABEZADO */
 header {
     background-color: #164e63;
     color: white;
@@ -13,6 +15,7 @@ header {
     padding: 25px;
 }
 
+/* MENU DE NAVEGACION */
 nav {
     background-color: #0f172a;
     padding: 10px;
@@ -36,12 +39,14 @@ nav a:hover {
     color: #67e8f9;
 }
 
+/* CONTENIDO PRINCIPAL */
 main {
     max-width: 900px;
     margin: 25px auto;
     padding: 0 20px;
 }
 
+/* SECCIONES Y ARTICULOS */
 article, section {
     background-color: white;
     margin-bottom: 20px;
@@ -53,6 +58,7 @@ li {
     margin-bottom: 12px;
 }
 
+/* CAMPO PARA ESCRIBIR NOTAS */
 textarea {
     display: block;
     width: 100%;
@@ -62,6 +68,20 @@ textarea {
     padding: 10px;
 }
 
+/* LISTAS DESPLEGABLES */
+select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+/* CASILLA DE NOTA IMPORTANTE */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* BOTONES GENERALES */
 button {
     background-color: #0e7490;
     color: white;
@@ -75,9 +95,67 @@ button:hover {
     background-color: #155e75;
 }
 
+/* NOTAS IMPORTANTES */
+.importante {
+    border-left: 5px solid #eab308;
+    background-color: #fefce8;
+}
+
+/* PIE DE PAGINA */
 footer {
     background-color: #164e63;
     color: white;
     text-align: center;
     padding: 15px;
+}
+
+/* BOTON PARA EDITAR NOTAS */
+.boton-editar {
+    background-color: #0e7490;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.boton-editar:hover {
+    background-color: #155e75;
+}
+
+/* BOTON PARA ELIMINAR NOTAS */
+.boton-eliminar {
+    background-color: #dc2626;
+    margin-top: 8px;
+}
+
+.boton-eliminar:hover {
+    background-color: #991b1b;
+}
+
+/* EDITOR DE NOTAS */
+article textarea {
+    width: 100%;
+    min-height: 90px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+article select {
+    display: block;
+    margin-bottom: 10px;
+}
+
+article label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* BOTONES DEL EDITOR */
+article button {
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+/* BOTON GUARDAR CAMBIOS */
+article button:hover {
+    background-color: #155e75;
 }

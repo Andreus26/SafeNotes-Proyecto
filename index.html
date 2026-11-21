@@ -4,16 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Safe Note</title>
+
+    <!-- CONEXION CON EL ARCHIVO CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
+    <!-- ENCABEZADO -->
     <header>
         <h1>Safe Note</h1>
         <p>Tu espacio para organizar tus notas</p>
     </header>
 
+    <!-- MENU DE NAVEGACION -->
     <nav>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -24,51 +29,137 @@
         </ul>
     </nav>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
+
+        <!-- SECCION DE INICIO -->
         <article id="inicio">
             <h2>Bienvenido a Safe Note</h2>
+
             <p>
                 Safe Note es una aplicación para escribir,
                 organizar y consultar notas personales.
             </p>
         </article>
 
+        <!-- FUNCIONES PRINCIPALES -->
         <section>
             <h2>Funciones principales</h2>
+
             <ul>
                 <li>Crear notas personales.</li>
                 <li>Consultar las notas guardadas.</li>
+                <li>Editar el contenido de las notas.</li>
+                <li>Eliminar notas que ya no necesitas.</li>
                 <li>Organizar notas por categorías.</li>
                 <li>Identificar notas importantes.</li>
-                <li>Mantener las notas organizadas.</li>
+                <li>Guardar las notas en el navegador.</li>
             </ul>
         </section>
 
+        <!-- CREAR UNA NOTA -->
         <section id="crear">
             <h2>Crear una nota</h2>
-            <textarea placeholder="Escribe tu nota aquí..."></textarea>
-            <button type="button">Guardar nota</button>
+
+            <!-- CAMPO PARA ESCRIBIR LA NOTA -->
+            <textarea id="textoNota"
+                placeholder="Escribe tu nota aquí..."></textarea>
+
+            <!-- SELECCIONAR CATEGORIA -->
+            <label for="categoriaNota">
+                Selecciona una categoría:
+            </label>
+
+            <select id="categoriaNota">
+                <option value="Estudio">Estudio</option>
+                <option value="Personal">Personal</option>
+                <option value="Trabajo">Trabajo</option>
+            </select>
+
+            <br><br>
+
+            <!-- MARCAR NOTA COMO IMPORTANTE -->
+            <label>
+                <input type="checkbox" id="notaImportante">
+                Marcar como importante
+            </label>
+
+            <br><br>
+
+            <!-- BOTON PARA GUARDAR -->
+            <button type="button" id="guardarNota">
+                Guardar nota
+            </button>
+
+            <!-- MENSAJES DEL SISTEMA -->
+            <p id="mensaje"></p>
         </section>
 
+        <!-- MIS NOTAS -->
         <section id="mis-notas">
             <h2>Mis notas</h2>
-            <p>Aquí se mostrarán tus notas.</p>
+
+            <!-- CONTADOR DE NOTAS -->
+            <p>
+                Notas guardadas:
+                <span id="contadorNotas">0</span>
+            </p>
+
+            <!-- FILTRAR POR CATEGORIA -->
+            <label for="filtroCategoria">
+                Filtrar por categoría:
+            </label>
+
+            <select id="filtroCategoria">
+                <option value="Todas">Todas</option>
+                <option value="Estudio">Estudio</option>
+                <option value="Personal">Personal</option>
+                <option value="Trabajo">Trabajo</option>
+            </select>
+
+            <!-- CONTENEDOR DE NOTAS -->
+            <div id="listaNotas">
+                <p>Aquí se mostrarán tus notas.</p>
+            </div>
         </section>
 
+        <!-- NOTAS IMPORTANTES -->
         <section id="importantes">
             <h2>Notas importantes</h2>
-            <p>Aquí podrás identificar tus notas prioritarias.</p>
+
+            <!-- CONTADOR DE NOTAS IMPORTANTES -->
+            <p id="contadorImportantes">
+                Notas importantes: 0
+            </p>
+
+            <!-- CONTENEDOR DE NOTAS IMPORTANTES -->
+            <div id="listaImportantes"></div>
         </section>
 
+        <!-- SEGURIDAD -->
         <section id="seguridad">
             <h2>Seguridad</h2>
-            <p>Organiza tus notas en un espacio pensado para ellas.</p>
+
+            <p>
+                Safe Note permite organizar y almacenar tus notas
+                en el navegador mediante almacenamiento local.
+            </p>
+
+            <p>
+                Recuerda que las notas se guardan en el navegador
+                y no se sincronizan automáticamente con otros dispositivos.
+            </p>
         </section>
+
     </main>
 
+    <!-- PIE DE PAGINA -->
     <footer>
         <p>Safe Note - Proyecto de desarrollo de software</p>
     </footer>
+
+    <!-- CONEXION CON JAVASCRIPT -->
+    <script src="Safe Notes/SAFE NOTES/app.js"></script>
 
 </body>
 </html>
