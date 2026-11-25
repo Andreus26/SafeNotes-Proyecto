@@ -1,15 +1,29 @@
 import TarjetaNota from "./TarjetaNota";
 
-export default function ListaNotas({ notas }) {
+export default function ListaNotas({
+  notas,
+  onAlternarImportante,
+  onEditarNota,
+  onEliminarNota,
+}) {
   if (!notas || notas.length === 0) {
-    return <p>No hay notas registradas todavía.</p>;
+    return <p>No hay notas para mostrar.</p>;
   }
 
   return (
-    <div>
-      {notas.map((nota) => (
-        <TarjetaNota key={nota.id} nota={nota} />
-      ))}
+    <div className="notes-grid">
+      {notas.map((nota, index) => {
+        const clave = nota?.id ?? nota?.nota?.id ?? index;
+        return (
+          <TarjetaNota
+            key={clave}
+            nota={nota}
+            onAlternarImportante={onAlternarImportante}
+            onEditarNota={onEditarNota}
+            onEliminarNota={onEliminarNota}
+          />
+        );
+      })}
     </div>
   );
 }
